@@ -1,7 +1,11 @@
 /* eslint-disable no-console */
 /* eslint-disable no-plusplus */
 
-console.log("test")
-for (let x = 0; x < 10; x++) {
-    console.log("test");
-}
+import "./style.css";
+
+const testButton = document.getElementById("testclick");
+const div2 = document.querySelector(".about");
+
+testButton.addEventListener("click", () =>
+	div2.scrollIntoView({ behavior: "smooth" })
+);

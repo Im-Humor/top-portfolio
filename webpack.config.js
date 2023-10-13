@@ -6,6 +6,9 @@ module.exports = {
 	entry: {
 		index: "./src/script.js",
 	},
+	devServer: {
+		static: "./dist",
+	},
 	plugins: [
 		new HtmlWebpackPlugin(
 			{
@@ -20,6 +23,9 @@ module.exports = {
 			"dist",
 		),
 		clean: true,
+	},
+	optimization: {
+		runtimeChunk: "single",
 	},
 	module: {
 		rules: [
