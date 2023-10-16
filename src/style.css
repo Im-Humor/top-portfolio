@@ -6,7 +6,6 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: #f1e0c5;
 }
 
 body * {
@@ -15,6 +14,7 @@ body * {
 	margin: 0;
 	padding: 0;
 	font-family: "Raleway";
+	color: #292b2c;
 }
 
 header {
@@ -44,6 +44,7 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: #f1e0c5;
 }
 
 .about-content {
@@ -98,8 +99,45 @@ header {
 	}
 }
 
+.red-text {
+	color: #f52100;
+}
+
 .about-text * {
 	margin: 0.5rem;
+}
+
+#resume {
+	background-image: linear-gradient(
+		to right,
+		#f1e0c5 0%,
+		#f1e0c5 50%,
+		white 50%,
+		white 100%
+	);
+}
+
+.resume-content {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+
+.resume-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.job-item {
+	margin: 0.5rem 0 0 0;
+}
+
+.resume-image {
+	height: 500px;
+	width: 300px;
+	border: 2px solid black;
+	animation-name: about-image-slide;
 }
 
 footer {
@@ -114,4 +152,6 @@ footer {
 
 .footer-link {
 	margin: 0 1rem 0;
+	color: #f52100;
+	font-weight: bold;
 }
