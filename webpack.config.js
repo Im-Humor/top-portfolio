@@ -5,23 +5,19 @@ module.exports = {
 	mode: "development",
 	entry: {
 		index: "./src/script.js",
+		scroll: "./src/scroll.js",
 	},
 	devServer: {
 		static: "./dist",
 	},
 	plugins: [
-		new HtmlWebpackPlugin(
-			{
-				template: "./src/index.html",
-			},
-		),
+		new HtmlWebpackPlugin({
+			template: "./src/index.html",
+		}),
 	],
 	output: {
 		filename: "[name].bundle.js",
-		path: path.resolve(
-			__dirname,
-			"dist",
-		),
+		path: path.resolve(__dirname, "dist"),
 		clean: true,
 	},
 	optimization: {
@@ -31,10 +27,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.css$/i,
-				use: [
-					"style-loader",
-					"css-loader",
-				],
+				use: ["style-loader", "css-loader"],
 			},
 			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
